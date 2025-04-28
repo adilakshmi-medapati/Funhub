@@ -1,0 +1,2 @@
+<link rel="stylesheet" href="styles.css">
+<?php $token = $_GET['token']; ?> <form action="reset_process.php" method="post"> <h2>Reset Password</h2> <input type="hidden" name="token" value="<?php echo $token; ?>"> <input type="password" name="new_password" placeholder="Enter new password" required> <button type="submit">Reset</button> </form>

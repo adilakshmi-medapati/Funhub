@@ -1,0 +1,126 @@
+:root {
+  --primary: #493D9E;
+  --secondary: #B2A5FF;
+  --light-accent: #DAD2FF;
+  --yellow: #FFF2AF;
+  --pink: #FFB6C1;
+  --green: #98FF98;
+  --error-red: #FF6B6B;
+  --success-green: #6BCB77;
+  --text-light: #ffffff;
+  --text-dark: #222222;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Comic Neue', cursive;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-dark); /* Default body text color */
+  padding: 20px;
+}
+
+/* Container */
+.login-container, 
+.register-container {
+  background: rgba(255, 255, 255, 0.97);
+  padding: 40px;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  color: var(--text-dark); /* FIX: Use dark text */
+}
+
+/* Heading */
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: var(--primary);
+  border: 5px solid white;
+}
+
+/* Input fields */
+.form-control {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1rem;
+  border: 2px solid var(--light-accent);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 0 var(--light-accent);
+  font-family: 'Comic Neue', cursive;
+  color: var(--text-dark); /* Ensure input text is visible */
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 6px 6px 0 var(--secondary);
+  transform: translateY(-3px);
+}
+
+/* Labels */
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-align: left;
+  color: var(--text-dark); /* FIX: Make labels visible */
+}
+
+/* Buttons */
+button, .btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--secondary);
+  color: var(--text-dark);
+}
+
+/* Link styling */
+a {
+  color: var(--pink);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+/* Message section like “Already have an account” */
+.login-container p {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: var(--text-dark); /* FIX: make paragraph text visible */
+}
+
+/* Optional animation */
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
