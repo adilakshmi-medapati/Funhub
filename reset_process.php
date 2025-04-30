@@ -7,5 +7,5 @@
      $stmt = $conn->prepare("UPDATE users SET password = ?, reset_token = NULL WHERE reset_token = ?");
       $stmt->bind_param("ss", $hashed, $token); 
       if ($stmt->execute() && $stmt->affected_rows > 0) 
-      { echo "✅ Password updated! <a href='login.php'>Login here</a>"; } 
+      { echo "✅ Password updated! <a href='index.php'>Login here</a>"; } 
       else { echo "❌ Invalid or expired token."; } } ?>
