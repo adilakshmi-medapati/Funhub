@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // Not an admin but tried to log in as one
                     echo "<script>
                             alert('Access denied: you are not an admin.');
-                            window.location.href='login.php';
+                            window.location.href='index.php';
                           </script>";
                     exit();
                 }
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 } else {
                     echo "<script>
                             alert('Invalid role. Contact admin.');
-                            window.location.href='login.php';
+                            window.location.href='index.php';
                           </script>";
                     exit();
                 }
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Wrong password
             echo "<script>
                     alert('Invalid password. Please try again.');
-                    window.location.href='login.php';
+                    window.location.href='index.php';
                   </script>";
             exit();
         }
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // User not found
         echo "<script>
                 alert('No such user. Please register first.');
-                window.location.href='login.php';
+                window.location.href='index.php';
               </script>";
         exit();
     }
